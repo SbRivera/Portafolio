@@ -750,150 +750,147 @@ textarea:focus {
   color: var(--text-muted);
 }
 
-/* ── APK Download Modal ── */
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(6px);
-  z-index: 2000;
+/* ── App Download Page ── */
+.app-page {
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
-}
-
-.modal-content {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-accent);
-  border-radius: 16px;
-  width: 100%;
-  max-width: 480px;
-  max-height: 90vh;
-  overflow-y: auto;
+  padding: 2rem;
   position: relative;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 0 1px var(--border-color);
 }
 
-.modal-close {
+.app-page-back {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 2rem;
+  left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   background: none;
   border: 1px solid var(--border-color);
   color: var(--text-secondary);
-  width: 32px;
-  height: 32px;
-  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 0.9rem;
   transition: all 0.2s ease;
-  z-index: 1;
 }
 
-.modal-close:hover {
+.app-page-back:hover {
   border-color: var(--accent-primary);
   color: var(--accent-primary);
 }
 
-.modal-header {
-  padding: 2.5rem 2rem 1.5rem;
-  text-align: center;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.app-icon-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1.25rem;
-}
-
-.modal-title {
-  font-size: 1.5rem;
-  color: var(--accent-primary);
-  margin-bottom: 0.5rem;
-}
-
-.modal-subtitle {
-  color: var(--text-muted);
-  font-size: 0.9rem;
-}
-
-.modal-body {
-  padding: 1.5rem 2rem;
-}
-
-.modal-description {
-  color: var(--text-secondary);
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
-  font-size: 0.95rem;
-}
-
-.app-features-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  margin-bottom: 1.5rem;
-  padding: 0;
-}
-
-.app-feature-item {
+.app-page-card {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  color: var(--text-primary);
-  font-size: 0.9rem;
+  gap: 3rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-accent);
+  border-radius: 16px;
+  padding: 2.5rem;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
-.feature-check {
-  display: flex;
-  align-items: center;
+.app-page-image {
   flex-shrink: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-.app-requirements {
+.app-page-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.app-page-image-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
+.app-page-image img + .app-page-image-fallback {
+  display: none;
+}
+
+.app-page-image--placeholder .app-page-image-fallback {
+  display: flex;
+}
+
+.app-page-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.app-page-title {
+  font-size: 1.4rem;
+  color: var(--accent-primary);
+  margin: 0 0 0.3rem;
+}
+
+.app-page-subtitle {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin: 0 0 1.25rem;
+}
+
+.app-page-badges {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-bottom: 1.25rem;
 }
 
-.requirement-badge {
-  display: flex;
-  align-items: center;
-  background: var(--bg-tertiary);
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  padding: 0.35rem 0.75rem;
-  font-size: 0.825rem;
-  color: var(--text-secondary);
-}
-
-.modal-footer {
-  padding: 1.5rem 2rem 2rem;
-  border-top: 1px solid var(--border-color);
-  text-align: center;
-}
-
-.btn-download {
-  width: 100%;
-  display: flex;
+.app-page-download {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.05rem;
-  padding: 0.9rem 1.5rem;
-  margin-bottom: 0.85rem;
+  font-size: 0.95rem;
+  padding: 0.7rem 1.5rem;
   text-decoration: none;
+  width: 100%;
 }
 
-.modal-warning {
-  font-size: 0.8rem;
+.app-page-warning {
+  font-size: 0.75rem;
   color: var(--text-muted);
-  line-height: 1.5;
-  margin: 0;
+  margin: 0.75rem 0 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+  .app-page-card {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .app-page-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .app-page-back {
+    top: 1rem;
+    left: 1rem;
+  }
 }
 
 /* ── Responsive ── */

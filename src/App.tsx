@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './i18n';
 import './styles/index.css';
 import Navbar from './components/Navbar';
@@ -10,9 +11,8 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import AppDownload from './components/AppDownload';
 
-const App: React.FC = () => {
+const Home: React.FC = () => {
   const [activeSection, setActiveSection] = useState('hero');
-  const [appModalOpen, setAppModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,15 +36,9 @@ const App: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Prevent body scroll when modal is open
-  useEffect(() => {
-    document.body.style.overflow = appModalOpen ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
-  }, [appModalOpen]);
-
   return (
-    <div className="app">
-      <Navbar activeSection={activeSection} onOpenApp={() => setAppModalOpen(true)} />
+    <>
+      <Navbar activeSection={activeSection} />
       <main>
         <Hero />
         <About />
@@ -60,10 +54,17 @@ const App: React.FC = () => {
           Diseñado con React & TypeScript
         </p>
       </footer>
-
-      <AppDownload isOpen={appModalOpen} onClose={() => setAppModalOpen(false)} />
-    </div>
+    </>
   );
 };
+
+const App: React.FC = () => (
+  <div className="app">
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/app" element={<AppDownload />} />
+    </Routes>
+  </div>
+);
 
 export default App;

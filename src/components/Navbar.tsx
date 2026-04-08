@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import { useTheme } from '../hooks/useTheme';
 
 interface NavbarProps {
   activeSection: string;
-  onOpenApp: () => void;
 }
 
 const SunIcon = () => (
@@ -28,11 +28,12 @@ const DownloadIcon = () => (
   </svg>
 );
 
-const Navbar: React.FC<NavbarProps> = ({ activeSection, onOpenApp }) => {
+const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
   const { t, i18n } = useTranslation();
   const { theme, toggleTheme } = useTheme();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -88,7 +89,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, onOpenApp }) => {
           <li>
             <button
               className="nav-link nav-app-btn"
-              onClick={() => { setMenuOpen(false); onOpenApp(); }}
+              onClick={() => { setMenuOpen(false); navigate('/app'); }}
               title={t('navigation.app') as string}
             >
               <DownloadIcon />

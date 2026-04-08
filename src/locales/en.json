@@ -150,7 +150,8 @@
       },
       "size": "~15 MB",
       "download": "Download APK",
-      "warning": "Enable installation from unknown sources on Android to install."
+      "warning": "Enable installation from unknown sources on Android to install.",
+      "back": "Back"
     }
   }
 }

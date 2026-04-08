@@ -150,7 +150,8 @@
       },
       "size": "~15 MB",
       "download": "Descargar APK",
-      "warning": "Habilita la instalación desde fuentes desconocidas en Android para instalar."
+      "warning": "Habilita la instalación desde fuentes desconocidas en Android para instalar.",
+      "back": "Volver"
     }
   }
 }
