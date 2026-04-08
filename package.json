@@ -2,7 +2,7 @@
   "name": "curriculum_vitae_sbrivera",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://sbrivera.github.io/Curriculum_Vitae_SbRivera",
+  "homepage": "https://sbrivera.github.io/Portafolio",
   "dependencies": {
     "@jridgewell/gen-mapping": "^0.3.12",
     "@types/react": "^18.0.0",
