@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <style>
+      .bg { fill: #0a0e1a; }
+      .text { fill: #00d4ff; font-family: serif; font-weight: bold; font-size: 14px; }
+    </style>
+  </defs>
+  <rect class="bg" width="32" height="32" rx="4"/>
+  <text class="text" x="16" y="20" text-anchor="middle">SR</text>
+</svg>
