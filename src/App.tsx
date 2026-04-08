@@ -8,9 +8,11 @@ import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import AppDownload from './components/AppDownload';
 
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState('hero');
+  const [appModalOpen, setAppModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,14 +32,19 @@ const App: React.FC = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Llamar una vez al montar
-
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Prevent body scroll when modal is open
+  useEffect(() => {
+    document.body.style.overflow = appModalOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [appModalOpen]);
+
   return (
     <div className="app">
-      <Navbar activeSection={activeSection} />
+      <Navbar activeSection={activeSection} onOpenApp={() => setAppModalOpen(true)} />
       <main>
         <Hero />
         <About />
@@ -46,22 +53,15 @@ const App: React.FC = () => {
         <Projects />
         <Contact />
       </main>
-      
-      {/* Footer */}
-      <footer style={{
-        background: 'var(--bg-secondary)',
-        borderTop: '1px solid var(--border-color)',
-        padding: '2rem',
-        textAlign: 'center',
-        color: 'var(--text-muted)'
-      }}>
-        <p className="font-cinzel">
-          © 2025 Sebastian Rivera. 
-        </p>
-        <p style={{ fontSize: '0.9rem', marginTop: '0.5rem' }}>
+
+      <footer className="site-footer">
+        <p className="font-cinzel">© 2025 Sebastian Rivera.</p>
+        <p style={{ fontSize: '0.875rem', marginTop: '0.4rem', color: 'var(--text-muted)' }}>
           Diseñado con React & TypeScript
         </p>
       </footer>
+
+      <AppDownload isOpen={appModalOpen} onClose={() => setAppModalOpen(false)} />
     </div>
   );
 };

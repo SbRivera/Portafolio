@@ -5,7 +5,8 @@
       "experience": "Experiencia",
       "skills": "Habilidades",
       "projects": "Educación",
-      "contact": "Contacto"
+      "contact": "Contacto",
+      "app": "App"
     },
     "hero": {
       "title": "Sebastián Benjamín Rivera Novillo",
@@ -19,7 +20,12 @@
       "email": "sebastianriv2112@gmail.com",
       "phone": "+593 995085689",
       "education": "Universidad de las Fuerzas Armadas ESPE",
-      "languages": "Español (Nativo) • Inglés (B1+ Intermedio Alto)"
+      "languages": "Español (Nativo) · Inglés (B1+ Intermedio Alto)",
+      "labelLocation": "Ubicación",
+      "labelEmail": "Correo",
+      "labelPhone": "Teléfono",
+      "labelEducation": "Educación",
+      "labelLanguages": "Idiomas"
     },
     "experience": {
       "title": "Experiencia Profesional",
@@ -89,7 +95,10 @@
     },
     "contact": {
       "title": "Información de Contacto",
-      "description": "Estoy disponible para oportunidades profesionales, colaboraciones en proyectos innovadores y consultas técnicas. No dudes en contactarme para discutir cómo puedo contribuir a tu equipo o proyecto.",
+      "description": "Estoy disponible para oportunidades profesionales, colaboraciones en proyectos innovadores y consultas técnicas. No dudes en contactarme.",
+      "connectTitle": "Conecta Conmigo",
+      "proposalTitle": "¿Tienes una propuesta?",
+      "proposalText": "Estoy siempre abierto a nuevas oportunidades y colaboraciones. No dudes en contactarme directamente.",
       "buttons": {
         "email": "Enviar Email Directo",
         "whatsapp": "Escribir por WhatsApp"
@@ -128,6 +137,20 @@
       "darkMode": "Modo Oscuro",
       "lightMode": "Modo Claro",
       "downloadCV": "Descargar CV"
+    },
+    "app": {
+      "title": "Aventura en Galápagos",
+      "subtitle": "Aplicación Android",
+      "description": "Aplicación móvil que te permite explorar las Islas Galápagos de forma interactiva con contenido multimedia, mapas y guías detalladas.",
+      "features": {
+        "feature1": "Interfaz intuitiva desarrollada con Flutter",
+        "feature2": "Contenido multimedia interactivo",
+        "feature3": "Mapas y guías de las Islas Galápagos",
+        "feature4": "Experiencia de usuario optimizada"
+      },
+      "size": "~15 MB",
+      "download": "Descargar APK",
+      "warning": "Habilita la instalación desde fuentes desconocidas en Android para instalar."
     }
   }
 }
