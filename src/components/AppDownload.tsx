@@ -19,7 +19,7 @@ const AppDownload: React.FC = () => {
         {/* Image placeholder */}
         <div className="app-page-image">
           <img
-            src={`${process.env.PUBLIC_URL}/aventura%20en%20galapagos%20logo.png`}
+            src={`${process.env.PUBLIC_URL}/1.png`}
             alt={t('app.title') as string}
             onError={(e) => {
               (e.target as HTMLImageElement).style.display = 'none';
