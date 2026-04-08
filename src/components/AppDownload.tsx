@@ -37,7 +37,7 @@ const AppDownload: React.FC = () => {
           </div>
 
           <a
-            href="https://drive.usercontent.google.com/download?id=1iNSv7aP3szS1cUKyxaxFbHq1drO0yBnO&export=download"
+            href="https://drive.google.com/file/d/1iNSv7aP3szS1cUKyxaxFbHq1drO0yBnO/view"
             target="_blank"
             rel="noopener noreferrer"
             className="btn app-page-download"
