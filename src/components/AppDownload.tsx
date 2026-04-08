@@ -33,12 +33,13 @@ const AppDownload: React.FC = () => {
 
           <div className="app-page-badges">
             <span className="requirement-badge">Android 6.0+</span>
-            <span className="requirement-badge">{t('app.size')}</span>
+            {/* <span className="requirement-badge">{t('app.size')}</span> */}
           </div>
 
           <a
-            href={`${process.env.PUBLIC_URL}/AventuraEnGalapagosAndroid.apk`}
-            download="AventuraEnGalapagos.apk"
+            href="https://drive.usercontent.google.com/download?id=1iNSv7aP3szS1cUKyxaxFbHq1drO0yBnO&export=download"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn app-page-download"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginRight: '8px' }}>
