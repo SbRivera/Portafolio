@@ -9,18 +9,18 @@
       "app": "App"
     },
     "hero": {
-      "title": "Sebasti�n Benjam�n Rivera Novillo",
+      "title": "Sebastián Benjamín Rivera Novillo",
       "subtitle": "Software Engineer",
       "description": "Highly proactive and creative professional specialized in software development and mobile applications. Committed to technical excellence, continuous learning, and innovation in digital solutions that create real impact."
     },
     "about": {
       "title": "Professional Profile",
       "description": "Software Engineering student with solid technical background and extensive practical experience in mobile application development and data analysis. I am highly proactive, creative, and have exceptional ability to work in teams under pressure. I maintain a constant commitment to continuous learning, technological innovation, and excellence in every project I develop.",
-      "location": "Alangas�, Pichincha, Ecuador",
+      "location": "Alangasí, Pichincha, Ecuador",
       "email": "sebastianriv2112@gmail.com",
       "phone": "+593 995085689",
       "education": "Universidad de las Fuerzas Armadas ESPE",
-      "languages": "Spanish (Native) � English (B1+ Upper Intermediate)",
+      "languages": "Spanish (Native) · English (B1+ Upper Intermediate)",
       "labelLocation": "Location",
       "labelEmail": "Email",
       "labelPhone": "Phone",
@@ -78,12 +78,12 @@
         "university": {
           "name": "Universidad de las Fuerzas Armadas ESPE",
           "degree": "Software Engineering",
-          "location": "Sangolqu�, Ecuador",
+          "location": "Sangolquí, Ecuador",
           "period": "2020 - Present",
           "status": "In Progress"
         },
         "highschool": {
-          "name": "Instituto Nacional Mej�a",
+          "name": "Instituto Nacional Mejía",
           "degree": "Bachelor in Sciences",
           "location": "Quito, Ecuador",
           "period": "2015 - 2020",
@@ -119,13 +119,13 @@
             "email": "zuritaruales@hotmail.com"
           },
           "ref2": {
-            "name": "Dr. Jorge Bola�os",
+            "name": "Dr. Jorge Bolaños",
             "title": "IT Law Specialist",
             "phone": "0995018560",
             "email": "bolanospizara@hotmail.com"
           },
           "ref3": {
-            "name": "Ing. Fernando Sol�s",
+            "name": "Ing. Fernando Solís",
             "title": "Systems & Computing Engineer",
             "phone": "0984074616",
             "email": "efsolis@espe.edu.ec"
@@ -139,13 +139,13 @@
       "downloadCV": "Download CV"
     },
     "app": {
-      "title": "Aventura en Gal�pagos",
+      "title": "Aventura en Galápagos",
       "subtitle": "Android App",
       "description": "Mobile application that lets you explore the Galápagos Islands interactively with multimedia content, maps, and detailed guides.",
       "features": {
         "feature1": "Intuitive interface built with Flutter",
         "feature2": "Interactive multimedia content",
-        "feature3": "Maps and guides of the Gal�pagos Islands",
+        "feature3": "Maps and guides of the Galápagos Islands",
         "feature4": "Optimized user experience"
       },
       "size": "~15 MB",
