@@ -55,6 +55,7 @@ export const useScrollAnimation = <T extends HTMLElement>(
 
     observer.observe(element);
     return () => observer.disconnect();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return elementRef;
@@ -96,6 +97,7 @@ export const useStaggerAnimation = <T extends HTMLElement>(
 
     observer.observe(container);
     return () => observer.disconnect();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [childSelector]);
 
   return containerRef;
